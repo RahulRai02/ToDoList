@@ -1,0 +1,14 @@
+<!-- my-3 means margin in y is 3 -->
+<div class = 'my-3'>
+    <h5 [ngClass]="{'strike': !todo.active}">{{todo.title}} </h5>
+    <p [ngClass]="{'strike': !todo.active}">{{todo.desc}} </p>
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1" (click)="onCheckBoxClick(todo)">
+        <label class="form-check-label mb-2 " for="gridCheck1">Mark as Done</label>
+    </div>
+
+    <!-- btn-sm is for making the button smaller -->
+    <!-- btn btn-danger for button -->
+    <button class = "btn btn-sm btn-danger" (click)="onClick(todo)">Delete</button>
+</div>
